@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+<p><%= link_to "Edit this task", task_edit_path(@task)%></p>
+<p style="background-color: #ddd"><%= @task.details %></p>
+<p>this task is completed?: <%= @task.completed%></p>
+<hr>
+<p><%= link_to "Delete this task",
+            task_path(@task),
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</p>
+<hr>
+<p><%= link_to "Back to all tasks", tasks_path %></p>
